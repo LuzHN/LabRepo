@@ -190,7 +190,7 @@ int  Menu(){
 							<<"4. Multiplicarlos." << endl
 							<<"5. Dividirlos."
 							<<"6. Suma entero y racional." << endl
-							<<"6. Salir." << endl << endl;
+							<<"7. Salir." << endl << endl;
 		cin >> opcion;
 		
 		return opcion;
