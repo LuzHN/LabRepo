@@ -193,9 +193,6 @@ int  Menu(){
 							<<"6. Suma entero y racional." << endl
 							<<"7. Salir." << endl << endl;
 		cin >> opcion;
-		   
-
-
 
 		return opcion;
 	}
