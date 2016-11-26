@@ -53,8 +53,10 @@ int main(){
 
 					if(rac3->getNumerador() % rac3->getDenominador() == 0){
 						cout << endl << "La suma es: " << rac3->getNumerador() / rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					} else{
 						cout << endl << "La suma es: " << rac3->getNumerador() << " / " << rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					}
 				}
 
@@ -71,8 +73,10 @@ int main(){
 
 					if(rac3->getNumerador() % rac3->getDenominador() == 0){
 						cout << endl << "La resta es: " << rac3->getNumerador() / rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					} else{
 						cout << endl << "La resta es: " << rac3->getNumerador() << " / " << rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					}
 				}
 
@@ -89,8 +93,10 @@ int main(){
 
 					if(rac3->getNumerador() % rac3->getDenominador() == 0){
 						cout << endl << "La multiplicacion resulta en: " << rac3->getNumerador() / rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					} else{
 						cout << endl << "La multiplicacion resulta en: " << rac3->getNumerador() << " / " << rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					}
 				}
 				break;
@@ -106,19 +112,41 @@ int main(){
 
 					if(rac3->getNumerador() % rac3->getDenominador() == 0){
 						cout << endl << "La division resulta en: " << rac3->getNumerador() / rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					} else{
 						cout << endl << "La division resulta en: " << rac3->getNumerador() << " / " << rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 					}
 				}
 				break;
 			}
 			case 6:{ //suma entero y racional 
 
-				if(numerador1 == 0 && numerador2 == 0 && denominador1 == 0 && denominador2 == 0){
-					cout << endl << "Tiene que ingresar numeros primero. ";
+				cout << endl << "Ingrese su numero entero: ";
+				int entero = 0;
+				cin >> entero;
+
+				cout << endl << "Ahora el numerador del racional: ";
+				int numeradorCase6 = 0;
+				cin >> numeradorCase6;
+
+				cout << endl << "Ahora el denominador del racional: ";
+				int denominadorCase6= 0;
+				cin >> denominadorCase6;
+
+				Racional* rac1 = new Racional(entero, 1);
+				Racional* rac2 = new Racional(numeradorCase6, denominadorCase6);
+
+				Racional* rac3 = *rac1 + *rac2;
+
+				if(rac3->getNumerador() % rac3->getDenominador() == 0){
+						cout << endl << "La suma es: " << rac3->getNumerador() / rac3->getDenominador();
+						delete rac1; delete rac2; delete rac3;
 				} else{
-					
+					cout << endl << "La suma es: " << rac3->getNumerador() << " / " << rac3->getDenominador();
+					delete rac1; delete rac2; delete rac3;
 				}
+
 				break;
 			}
 			case 7:{
@@ -149,7 +177,7 @@ int  Menu(){
 							<<"3. Restarlos." << endl
 							<<"4. Multiplicarlos." << endl
 							<<"5. Dividirlos." << endl
-							<<"6. " << endl
+							<<"6. Suma entero y racional" << endl
 							<<"7. Salir" << endl << endl;
 		cin >> opcion;
 		
@@ -160,7 +188,8 @@ int  Menu(){
 							<<"2. Sumarlos." << endl
 							<<"3. Restarlos." << endl
 							<<"4. Multiplicarlos." << endl
-							<<"5. Dividirlos." << endl
+							<<"5. Dividirlos."
+							<<"6. Suma entero y racional." << endl
 							<<"6. Salir." << endl << endl;
 		cin >> opcion;
 		
