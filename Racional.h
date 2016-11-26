@@ -21,6 +21,8 @@ class Racional{
 		void setDenominador(int);
 		Racional* operator+(const Racional&);
 		Racional* operator-(const Racional&);
+		Racional* operator*(const Racional&);
+		Racional* operator/(const Racional&);
 
 };
 

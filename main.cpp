@@ -82,7 +82,16 @@ int main(){
 				if(numerador1 == 0 && numerador2 == 0 && denominador1 == 0 && denominador2 == 0){
 					cout << endl << "Tiene que ingresar numeros primero. ";
 				} else{
-					
+					Racional* rac1 = new Racional(numerador1, denominador1);
+					Racional* rac2 = new Racional(numerador2, denominador2);
+
+					Racional* rac3 = *rac1 * *rac2;
+
+					if(rac3->getNumerador() % rac3->getDenominador() == 0){
+						cout << endl << "La multiplicacion resulta en: " << rac3->getNumerador() / rac3->getDenominador();
+					} else{
+						cout << endl << "La multiplicacion resulta en: " << rac3->getNumerador() << " / " << rac3->getDenominador();
+					}
 				}
 				break;
 			}
@@ -90,7 +99,16 @@ int main(){
 				if(numerador1 == 0 && numerador2 == 0 && denominador1 == 0 && denominador2 == 0){
 					cout << endl << "Tiene que ingresar numeros primero. ";
 				} else{
-					
+					Racional* rac1 = new Racional(numerador1, denominador1);
+					Racional* rac2 = new Racional(numerador2, denominador2);
+
+					Racional* rac3 = *rac1 / *rac2;
+
+					if(rac3->getNumerador() % rac3->getDenominador() == 0){
+						cout << endl << "La division resulta en: " << rac3->getNumerador() / rac3->getDenominador();
+					} else{
+						cout << endl << "La division resulta en: " << rac3->getNumerador() << " / " << rac3->getDenominador();
+					}
 				}
 				break;
 			}

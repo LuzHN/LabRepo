@@ -74,6 +74,40 @@ Racional* Racional :: operator-(const Racional& der){
 
 }
 
+Racional* Racional :: operator*(const Racional& der){
+	
+	int denominadorIzq = this->denominador; 
+	int numeradorIzq = this->numerador;
+
+
+	int denominadorDerecha = der.denominador;
+	int numeradorDerecha = der.numerador;	
+
+	int numeradorResult = numeradorIzq * numeradorDerecha;
+	int denominadorResult = denominadorDerecha * denominadorIzq;
+
+	Racional* result = new Racional(numeradorResult, denominadorResult);
+	return result;
+
+}
+
+Racional* Racional :: operator/(const Racional& der){
+	
+	int denominadorIzq = this->denominador; 
+	int numeradorIzq = this->numerador;
+
+
+	int denominadorDerecha = der.denominador;
+	int numeradorDerecha = der.numerador;	
+
+	int numeradorResult = numeradorIzq * denominadorDerecha;
+	int denominadorResult = denominadorIzq * numeradorDerecha;
+
+	Racional* result = new Racional(numeradorResult, denominadorResult);
+	return result;
+
+}
+
 int Racional :: getNumerador(){
 	return numerador;
 }
