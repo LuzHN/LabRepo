@@ -121,7 +121,7 @@ int main(){
 				break;
 			}
 			case 6:{ //suma entero y racional 
-
+				
 				cout << endl << "Ingrese su numero entero: ";
 				int entero = 0;
 				cin >> entero;
@@ -182,6 +182,7 @@ int  Menu(){
 		cin >> opcion;
 		
 		return opcion;
+
 	} else{
 		cout << endl << endl << "================ Menu ====================" << endl << endl
 							<<"1. Ingresar dos numeros." << endl
@@ -192,7 +193,10 @@ int  Menu(){
 							<<"6. Suma entero y racional." << endl
 							<<"7. Salir." << endl << endl;
 		cin >> opcion;
-		
+		   
+
+
+
 		return opcion;
 	}
 
